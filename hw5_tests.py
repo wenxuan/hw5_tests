@@ -40,6 +40,7 @@ class TestCard(unittest.TestCase):
         '''
         c1 = hw5_cards.Card(rank = 12)
         self.assertEqual(c1.rank_name, "Queen")
+        return c1.rank_name,"Queen"
     
     def test_q2(self):
         '''
@@ -54,7 +55,8 @@ class TestCard(unittest.TestCase):
 
         '''
         c1 = hw5_cards.Card(suit = 1)
-        self.assertEqual(c1.suit_name, "Clubs") 
+        self.assertEqual(c1.suit_name, "Clubs")
+        return c1.suit_name, "Clubs"
           
     
 
@@ -73,6 +75,7 @@ class TestCard(unittest.TestCase):
         '''
         c1 = hw5_cards.Card(rank = 13, suit = 3)
         self.assertEqual(c1.__str__(),"King of Spades")
+        return c1.__str__(),"King of Spades"
     
     def test_q4(self):
         '''
@@ -88,6 +91,7 @@ class TestCard(unittest.TestCase):
         '''
         d1 = hw5_cards.Deck()
         self.assertEqual(len(d1.cards),52)
+        return len(d1.cards),52
 
     def test_q5(self):
         '''
@@ -104,6 +108,7 @@ class TestCard(unittest.TestCase):
         dc = hw5_cards.Deck()
         dcard = dc.deal_card()
         self.assertIsInstance(dcard,hw5_cards.Card)
+        return dcard,hw5_cards.Card
     
     def test_q6(self):
         '''
@@ -121,6 +126,7 @@ class TestCard(unittest.TestCase):
         dc = hw5_cards.Deck()
         dcard = dc.deal_card()
         self.assertEqual(len(dc.cards),51)
+        return len(dc.cards),51
     
 
     def test_q7(self):
@@ -140,6 +146,7 @@ class TestCard(unittest.TestCase):
         dcard = dc.deal_card()
         dc.replace_card(dcard)
         self.assertEqual(len(dc.cards),52)
+        return len(dc.cards),52
     
     def test_q8(self):
         '''
@@ -159,6 +166,7 @@ class TestCard(unittest.TestCase):
         dc.replace_card(dcard)
         dc.replace_card(dcard)
         self.assertEqual(len(dc.cards),52)
+        return len(dc.cards),52
 
 
 
